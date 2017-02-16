@@ -17,7 +17,7 @@ var outputJSON = {
 };
 
 var outputString = [
-  'window.TwisonSavePath = {{TwisonSavePath}};\n',
+  'window.TwisonSavePath = "{{TwisonSavePath}}";\n',
   'window.storyFormat(', JSON.stringify(outputJSON, null, 2), ');'
 ].join('');
 
