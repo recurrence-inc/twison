@@ -112,7 +112,7 @@ var Twison = {
           }
         } else {
           if (error && typeof error === 'function') {
-            error(xhr.statusText);
+            error('Error:\n\n' + xhr.responseText);
           }
         }
     };
