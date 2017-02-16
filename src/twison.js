@@ -95,7 +95,7 @@ var Twison = {
       Twison.saveJSON(window.TwisonSavePath, json, function onSuccess () {
         window.alert('Save successful.');
       }, function onError (errResponse) {
-        window.alert('errResponse');
+        window.alert(errResponse);
       });
     }
   },
