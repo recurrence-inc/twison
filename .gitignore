@@ -1,1 +1,7 @@
 node_modules
+
+# Sublime editor
+# ==============
+.sublime-project
+*.sublime-project
+*.sublime-workspace

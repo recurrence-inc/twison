@@ -90,6 +90,33 @@ var Twison = {
     var storyData = document.getElementsByTagName("tw-storydata")[0];
     var json = JSON.stringify(Twison.convertStory(storyData), null, 2);
     document.getElementById("output").innerHTML = json;
+
+    if (window.Twison && window.TwisonSavePath) {
+      Twison.saveJSON(window.TwisonSavePath, json, function onSuccess () {
+        window.alert('Save successful.');
+      }, function onError (errResponse) {
+        window.alert('errResponse');
+      });
+    }
+  },
+
+  saveJSON: function saveJSON (path, json, success, error) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('POST', path);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onload = function onload () {
+        if (xhr.status === 200) {
+          if (success && typeof success === 'function') {
+            success(xhr.responseText);
+          }
+        } else {
+          if (error && typeof error === 'function') {
+            error(xhr.statusText);
+          }
+        }
+    };
+    xhr.send(json);
   }
 }
 
