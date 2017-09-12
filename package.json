@@ -1,5 +1,5 @@
 {
-  "name": "regw-Twison",
+  "name": "recurrenceinc-Twison",
   "version": "0.0.1",
   "description": "Export your Twine 2 story as a JSON document and save",
   "main": "format.js",

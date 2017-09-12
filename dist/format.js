@@ -1,6 +1,6 @@
 window.TwisonSavePath = "{{TwisonSavePath}}";
 window.storyFormat({
-  "name": "regw-Twison",
+  "name": "recurrence-Twison",
   "version": "0.0.1",
   "author": "Mike Lazer-Walker, Michael Afrides",
   "description": "Export your Twine 2 story as a JSON document and save",
